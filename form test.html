@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign Up Yo!</title>
+        <style>
+            body{
+               margin-top: 50px;
+            }
+            h2{
+                margin: 10px auto;
+                width: 100px;
+            }
+            form{
+                margin: 10px auto;
+                width: 500px;
+                height: 800px;
+            }
+            #addrs{
+                width: 300px;
+            }
+            #mssg{
+                width: 300px;
+                height: 100px;
+            }
+            .output{
+                width: 250px;
+                height: 350px;
+                background-color: lightgrey;
+                margin-top: -300px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Register!</h2>
+        <form>
+            <label for="fname"> Firstname: </label><br>
+            <input type="text" id="fname" placeholder="Linus"><br><br>
+            <label for="lname"> Lastname: </label><br>
+            <input type="text" id="lname" placeholder="Asogwa"><br><br>
+            <label for="addrs"> Address: </label><br>
+            <input type="text" id="addrs"><br><br>
+            <label for="gndr">Gender:</label>
+            <select name="Gender" id="gndr">
+                <option value="option1">Male</option>
+                <option value="option2">Female</option>
+                <option value="option3">Rather not say</option>
+            </select><br><br>
+            <label for="numbr">Phonenumber:</label><br>
+            <input type="text" id="numbr"><br><br>
+            <label for="mssg">Message:</label><br>
+            <input type="text area" id="mssg" placeholder="input text here"><br><br>
+            <button type="button" id="submit" onclick="display()">Submit</button>
+        </form>
+
+        <div class="output" id="output">
+            <h3> Results </h3>
+            <p id="fn"></p>
+            <p id="ln"></p>
+            <p id="ad"></p>
+            <p id="gd"></p>
+            <p id="pn"></p>
+            <p id="ms"></p>
+        </div>
+
+        <script type="text/javascript">
+
+            const Firstname = document.getElementById("fname");
+            const Lastname = document.getElementById("lname");
+            const Address = document.getElementById("addrs");
+            const Gender = document.getElementById("gndr");
+            const Phonenumber = document.getElementById("numbr");
+            const Message = document.getElementById("msssg");
+            const output = document.querySelector('.output');
+
+            function display() {
+                fn.innerHTML = "Firstname:" + " " + Firstname.value;
+                ln.innerHTML = "Lastname:" + " " + Lastname.value;
+                ad.innerHTML = "Address:" + " " + Address.value;
+                gd.innerHTML = "Gender:" + " " + Gender.value;
+                pn.innerHTML = "Phonenumber:" + " " + Phonenumber.value;
+                ms.innerHTML = "Message:" + " " + Message.value;
+                result.innerHTML = "Result";
+            }
+        </script>
+    </body>
+</html>
